@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ichi/product_manager.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,25 +11,7 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text('簡単リスト'),
           ),
-          body: Column(
-            children: <Widget>[
-              Container(
-                margin: EdgeInsets.all(10.0),
-                child: RaisedButton(
-                  onPressed: () {},
-                  child: Text('品物を出す'),
-                ),
-              ),
-              Card(
-                child: Column(
-                  children: <Widget>[
-                    Image.asset('assets/sushi1.png'),
-                    Text('食べ物のパラダイス')
-                  ],
-                ),
-              ),
-            ],
-          )),
+          body: ProductManager()),
     );
   }
 }
